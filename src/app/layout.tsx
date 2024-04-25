@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import { Big_Shoulders_Display } from "next/font/google";
 import "./globals.css";
+import { shoulders } from "@/app/fonts"
 
-const inter = Big_Shoulders_Display({ subsets: ["latin"], weight: ["900"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={shoulders.className}>{children}</body>
     </html>
   );
 }
