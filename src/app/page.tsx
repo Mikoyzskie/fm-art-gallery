@@ -36,7 +36,13 @@ export default function Home() {
           alt="hero image"
           width={686}
           height={960}
-          className="pt-8"
+          className="pt-8 pb-4"
+        />
+        <Image
+          src={"/mobile/image-grid-3@2x.jpg"}
+          alt="art gallery"
+          width={686}
+          height={400}
         />
       </div>
 
