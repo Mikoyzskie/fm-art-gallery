@@ -1,6 +1,7 @@
 import React from 'react'
 import { outfit } from "@/app/fonts";
-import Image from "next/image"
+import { Image } from "@nextui-org/image";
+import Socials from '@/components/Socials';
 
 export default function page() {
   return (
@@ -25,8 +26,11 @@ export default function page() {
         <h1 className='text-[50px] leading-[45px] '>OUR LOCATION</h1>
         <div className='flex flex-col gap-5'>
           <h3 className='text-[#D5966C] text-[32px] leading-8 uppercase'>99 King Street</h3>
-          <div>
-            <p className={`${outfit.className}`}>Newport<br />RI 02840<br />United States of America</p>
+          <div className={`${outfit.className} flex flex-col gap-5 text-lg`}>
+            <p>Newport<br />RI 02840<br />United States of America</p>
+            <p>
+              Our newly opened gallery is located near the Edward King House on 99 King Street, the Modern Art Gallery is free to all visitors and open seven days a week from 8am to 9pm.
+            </p>
           </div>
         </div>
       </div>
@@ -39,26 +43,7 @@ export default function page() {
           className="pb-[38px]"
         />
         <p className={`${outfit.className} pb-[38px]`}>The Modern Art Gallery is free to all visitors and open seven days a week from 8am to 9pm. Find us at 99 King Street, Newport, USA.</p>
-        <div className="flex gap-5 invert">
-          <Image
-            src={"/icon-facebook.svg"}
-            alt="facebook icon"
-            width={20}
-            height={20}
-          />
-          <Image
-            src={"/icon-instagram.svg"}
-            alt="instagram icon"
-            width={20}
-            height={20}
-          />
-          <Image
-            src={"/icon-twitter.svg"}
-            alt="twitter icon"
-            width={20}
-            height={20}
-          />
-        </div>
+        <Socials theme='#151515' />
       </footer>
     </>
   )

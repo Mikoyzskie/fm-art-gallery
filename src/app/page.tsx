@@ -1,5 +1,7 @@
+import Socials from "@/components/Socials";
 import { outfit } from "./fonts";
-import Image from "next/image";
+import { Image } from "@nextui-org/image";
+import Link from "next/link"
 
 export default function Home() {
   return (
@@ -14,12 +16,14 @@ export default function Home() {
         <div className="px-4 pt-8 pb-[120px] flex flex-col gap-8">
           <h1 className="text-[#151515] font-black text-6xl leading-[55px] tracking-normal">MODERN<br /> ART GALLERY</h1>
           <p className={`${outfit.className} text-[##444444] text-lg`}>The arts in the collection of the Modern Art Gallery all started from a spark of inspiration. Will these pieces inspire you? Visit us and find out.</p>
-          <button className="flex h-full">
-            <span className="bg-[#151515] px-8 py-6 text-white">OUR LOCATION</span>
-            <span className="bg-[#D5966C] p-6">
-              <svg width="10" height="24" xmlns="http://www.w3.org/2000/svg"><path stroke="#FFF" fill="none" d="m1 0 8 12-8 12" /></svg>
-            </span>
-          </button>
+          <Link href={"/location"}>
+            <button className="flex h-full">
+              <span className="bg-[#151515] px-8 py-6 text-white">OUR LOCATION</span>
+              <span className="bg-[#D5966C] p-6">
+                <svg width="10" height="24" xmlns="http://www.w3.org/2000/svg"><path stroke="#FFF" fill="none" d="m1 0 8 12-8 12" /></svg>
+              </span>
+            </button>
+          </Link>
         </div>
 
         <div className="px-4">
@@ -62,26 +66,7 @@ export default function Home() {
           className="pb-[38px]"
         />
         <p className={`${outfit.className} pb-[38px]`}>The Modern Art Gallery is free to all visitors and open seven days a week from 8am to 9pm. Find us at 99 King Street, Newport, USA.</p>
-        <div className="flex gap-5">
-          <Image
-            src={"/icon-facebook.svg"}
-            alt="facebook icon"
-            width={20}
-            height={20}
-          />
-          <Image
-            src={"/icon-instagram.svg"}
-            alt="instagram icon"
-            width={20}
-            height={20}
-          />
-          <Image
-            src={"/icon-twitter.svg"}
-            alt="twitter icon"
-            width={20}
-            height={20}
-          />
-        </div>
+        <Socials theme="#fff" />
       </footer>
     </>
   );

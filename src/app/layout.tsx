@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { shoulders } from "@/app/fonts"
+import Providers from "./providers";
 
 
 export const metadata: Metadata = {
@@ -15,7 +16,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={shoulders.className}>{children}</body>
+      <body className={shoulders.className}>
+        <Providers>
+          {children}
+        </Providers>
+      </body>
     </html>
   );
 }
