@@ -16,7 +16,7 @@ export default function Home() {
         <div className="px-4 pt-8 pb-[120px] flex flex-col gap-8">
           <h1 className="text-[#151515] font-black text-6xl leading-[55px] tracking-normal">MODERN<br /> ART GALLERY</h1>
           <p className={`${outfit.className} text-[##444444] text-lg`}>The arts in the collection of the Modern Art Gallery all started from a spark of inspiration. Will these pieces inspire you? Visit us and find out.</p>
-          <Link href={"/location"}>
+          <Link href={"/location"} className="hover:cursor-pointer">
             <button className="flex h-full">
               <span className="bg-[#151515] px-8 py-6 text-white">OUR LOCATION</span>
               <span className="bg-[#D5966C] p-6">
