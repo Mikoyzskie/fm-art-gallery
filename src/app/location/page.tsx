@@ -54,16 +54,20 @@ export default function page() {
           </div>
         </div>
       </div>
-      <footer className="bg-[#D5966C] text-[#151515] px-8 py-12">
-        <Image
-          src={"/logo-dark.svg"}
-          alt="logo footer"
-          width={111}
-          height={40}
-          className="pb-[38px]"
-        />
-        <p className={`${outfit.className} pb-[38px]`}>The Modern Art Gallery is free to all visitors and open seven days a week from 8am to 9pm. Find us at 99 King Street, Newport, USA.</p>
-        <Socials theme='#151515' />
+      <footer className="bg-[#D5966C] text-[#151515] px-8 py-12 sm:px-10 sm:py-14">
+        <div className='flex flex-col sm:flex-row items-start justify-between gap-[38px] max-w-[1110px] w-full mx-auto'>
+          <div className='flex flex-col sm:flex-row gap-[38px] sm:gap-[65px] lg:gap-[140px]'>
+            <Image
+              src={"/logo-dark.svg"}
+              alt="logo footer"
+              width={111}
+              height={40}
+              className=""
+            />
+            <p className={`${outfit.className} sm:max-w-[281px] md:max-w-[430px] w-full md:text-lg`}>The Modern Art Gallery is free to all visitors and open seven days a week from 8am to 9pm. Find us at 99 King Street, Newport, USA.</p>
+          </div>
+          <Socials theme='#151515' />
+        </div>
       </footer>
     </>
   )
