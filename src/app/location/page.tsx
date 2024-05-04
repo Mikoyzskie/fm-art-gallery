@@ -27,17 +27,19 @@ export default function page() {
           alt='location map'
           height={1200}
           width={2880}
-          className='lg:block hidden'
+          className='lg:block hidden h-[600px] object-cover w-full'
         />
-        <div className='absolute top-0 left-0'>
-          <Link href={"/"} className='hover:cursor-pointer'>
-            <button className="flex h-full">
-              <span className="bg-[#D5966C] p-6">
-                <svg width="10" height="24" xmlns="http://www.w3.org/2000/svg"><path stroke="#FFF" fill="none" d="M9 24 1 12 9 0" /></svg>
-              </span>
-              <span className="bg-[#151515] px-[30px] leading-6 py-6 text-white text-[20px] tracking-[3.64px]">BACK TO HOME</span>
-            </button>
-          </Link>
+        <div className='absolute inset-0'>
+          <div className='max-w-[1110px] w-full mx-auto'>
+            <Link href={"/"} className='hover:cursor-pointer'>
+              <button className="flex h-full">
+                <span className="bg-[#D5966C] p-6">
+                  <svg width="10" height="24" xmlns="http://www.w3.org/2000/svg"><path stroke="#FFF" fill="none" d="M9 24 1 12 9 0" /></svg>
+                </span>
+                <span className="bg-[#151515] px-[30px] leading-6 py-6 text-white text-[20px] tracking-[3.64px]">BACK TO HOME</span>
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
       <div className="bg-[#151515]">
