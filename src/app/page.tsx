@@ -27,32 +27,47 @@ export default function Home() {
         </div>
 
         <div className="px-4">
-          <Image
-            src={"/mobile/image-grid-1@2x.jpg"}
-            alt="hero image"
-            width={686}
-            height={640}
-            className="pb-8"
-          />
-          <h2 className="text-[#151515] pb-[21px] font-black text-[50px] leading-[45px] uppercase">Your Day<br /> at the Gallery</h2>
-          <p className={`${outfit.className} text-[#444444] text-lg`}>Wander through our distinct collections and find new insights about our artists. Dive into the details of their creative process.</p>
-          <Image
-            src={"/mobile/image-grid-2@2x.jpg"}
-            alt="hero image"
-            width={686}
-            height={960}
-            className="pt-8 pb-4"
-          />
-          <Image
-            src={"/mobile/image-grid-3@2x.jpg"}
-            alt="art gallery"
-            width={686}
-            height={400}
-            className="pb-4"
-          />
-          <div className="bg-[#151515] text-white px-6 py-12">
-            <h2 className="pb-[21px] font-black text-[50px] leading-[45px] uppercase">COME &amp; BE INSPIRED</h2>
-            <p className={`${outfit.className} text-lg`}>{"We’re excited to welcome you to our gallery and see how our collections influence you."}</p>
+          <div className="flex flex-col sm:flex-row-reverse sm:items-center w-full justify-between ">
+            <Image
+              src={"/mobile/image-grid-1@2x.jpg"}
+              alt="hero image"
+              width={686}
+              height={640}
+              className="pb-8 block sm:hidden"
+            />
+            <Image
+              src={"/tablet/image-grid-1@2x.jpg"}
+              alt="hero image"
+              width={786}
+              height={800}
+              className="sm:block hidden grow pl-[68px]"
+            />
+            <div className="sm:max-w-[223px]">
+              <h2 className="text-[#151515] pb-[21px] font-black text-[50px] leading-[45px] uppercase">Your Day at the Gallery</h2>
+              <p className={`${outfit.className} text-[#444444] text-lg`}>Wander through our distinct collections and find new insights about our artists. Dive into the details of their creative process.</p>
+            </div>
+          </div>
+          <div className="flex flex-col sm:flex-row sm:gap-[11px] sm:pt-[11px]">
+            <Image
+              src={"/mobile/image-grid-2@2x.jpg"}
+              alt="hero image"
+              width={686}
+              height={960}
+              className="pt-8 sm:py-0 pb-4 h-full object-cover"
+            />
+            <div>
+              <Image
+                src={"/mobile/image-grid-3@2x.jpg"}
+                alt="art gallery"
+                width={686}
+                height={400}
+                className="pb-4 sm:pb-[11px]"
+              />
+              <div className="bg-[#151515] text-white px-6 py-12">
+                <h2 className="pb-[21px] font-black text-[50px] leading-[45px] uppercase">COME &amp; BE INSPIRED</h2>
+                <p className={`${outfit.className} text-lg`}>{"We’re excited to welcome you to our gallery and see how our collections influence you."}</p>
+              </div>
+            </div>
           </div>
         </div>
 
