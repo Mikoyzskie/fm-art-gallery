@@ -1,6 +1,6 @@
 import Socials from "@/components/Socials";
 import { outfit } from "./fonts";
-import { Image } from "@nextui-org/image";
+import Image from "next/image"
 import Link from "next/link"
 
 export default function Home() {
@@ -27,43 +27,43 @@ export default function Home() {
         </div>
 
         <div className="px-4">
-          <div className="flex flex-col sm:flex-row-reverse sm:items-center w-full justify-between ">
+          <div className="flex flex-col md:flex-row-reverse md:items-center md:gap-[68px] w-full justify-between ">
             <Image
               src={"/mobile/image-grid-1@2x.jpg"}
               alt="hero image"
               width={686}
               height={640}
-              className="pb-8 block sm:hidden"
+              className="pb-8 block md:hidden"
             />
             <Image
               src={"/tablet/image-grid-1@2x.jpg"}
               alt="hero image"
               width={786}
               height={800}
-              className="sm:block hidden grow pl-[68px]"
+              className="md:block hidden w-full object-cover max-w-[398px]"
             />
-            <div className="sm:max-w-[223px]">
+            <div className="">
               <h2 className="text-[#151515] pb-[21px] font-black text-[50px] leading-[45px] uppercase">Your Day at the Gallery</h2>
               <p className={`${outfit.className} text-[#444444] text-lg`}>Wander through our distinct collections and find new insights about our artists. Dive into the details of their creative process.</p>
             </div>
           </div>
-          <div className="flex flex-col sm:flex-row sm:gap-[11px] sm:pt-[11px]">
+          <div className="flex flex-col md:flex-row sm:gap-[11px] sm:pt-[11px]">
             <Image
               src={"/mobile/image-grid-2@2x.jpg"}
               alt="hero image"
               width={686}
               height={960}
-              className="pt-8 sm:py-0 pb-4 h-full object-cover"
+              className="pt-8 sm:py-0 max-h-[720px] md:max-w-[398px] pb-4 h-full object-cover"
             />
-            <div>
+            <div className="flex flex-col sm:gap-[11px]">
               <Image
                 src={"/mobile/image-grid-3@2x.jpg"}
                 alt="art gallery"
                 width={686}
                 height={400}
-                className="pb-4 sm:pb-[11px]"
+                className="pb-4 sm:pb-0 basis-1/2 w-full object-cover"
               />
-              <div className="bg-[#151515] text-white px-6 py-12">
+              <div className="bg-[#151515] text-white px-6 py-12 basis-1/2 flex justify-center flex-col">
                 <h2 className="pb-[21px] font-black text-[50px] leading-[45px] uppercase">COME &amp; BE INSPIRED</h2>
                 <p className={`${outfit.className} text-lg`}>{"We’re excited to welcome you to our gallery and see how our collections influence you."}</p>
               </div>
@@ -71,7 +71,7 @@ export default function Home() {
           </div>
         </div>
 
-      </main>
+      </main >
       <footer className="bg-[#151515] text-[#fff] px-8 py-12 sm:px-10 sm:py-14">
         <div className='flex flex-col sm:flex-row items-start justify-between gap-[38px] max-w-[1110px] w-full mx-auto'>
           <div className='flex flex-col sm:flex-row gap-[38px] sm:gap-[65px] lg:gap-[140px]'>
@@ -80,7 +80,7 @@ export default function Home() {
               alt="logo footer"
               width={111}
               height={40}
-              className=""
+              className="object-contain"
             />
             <p className={`${outfit.className} sm:max-w-[281px] md:max-w-[430px] w-full md:text-lg`}>The Modern Art Gallery is free to all visitors and open seven days a week from 8am to 9pm. Find us at 99 King Street, Newport, USA.</p>
           </div>
